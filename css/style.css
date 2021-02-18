@@ -10,31 +10,51 @@ body {
     height: 100vh;
 }
 
-/* Main */
-main {
-    position: relative;
-    height: calc(100% - 80px);
-    width: ;
-    background-color: #141922;
-    overflow: auto;
+/* Mix */
+.flex-container {
     display: flex;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.list-style {
+    list-style: none;
+}
+
+/* Main */
+main {
+    height: calc(100% - 80px);
+    background-color: #141922;
+    overflow: auto;
+}
+
+/* Aside lists and logo */
 aside {
     color: #fff;
     background-color: #000;
     width: 230px;
     height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
     flex-shrink: 0;
 }
 
-/* Upgrade (button) bar */
-.upgrade-bar {
+.logo img {
     width: 100%;
+    height: auto;
+}
+
+/* Upgrade bar */
+.upgrade-bar {
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    width: 85%;
     height: 80px;
     background-color: #080b12;
-    opacity: 0.6;
-    display: flex;
+    opacity: 0.8;
     justify-content: flex-end;
     align-items: center;
 }
@@ -46,19 +66,34 @@ aside {
     background-color: inherit;
     border: 2px solid #fff;
     border-radius: 500px;
-    padding: 15px 40px;
-    margin-right: 5px;
+    padding: 15px 45px;
+    margin-right: 25px;
+    transition: 0.5s;
+}
+
+.upgrade-bar button:hover {
+    transform: scale(1.2);
 }
 
 .music-container {
-    position: absolute;
-    top: 70px;
-    /* width: 90%; */
+    margin-top: 80px;
+    left: 230px;
 }
 
+.main-list ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.main-list li a {
+    color: #7d7f84;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 /* Footer */
 footer {
     background-color: #282828;
     height: 80px;
-
 }
