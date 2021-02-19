@@ -150,7 +150,7 @@ aside {
 
 .spotify-features h3 {
     color: #fff;
-    font-size: 18;
+    font-size: 16px;
     margin: 12px 0 10px;
 }
 
@@ -184,11 +184,6 @@ aside {
 }
 
 /* Music-items part */
-.music-container {
-    width: calc(100% - 230px);
-    margin-top: 80px;
-}
-
 .main-list {
     width: 100%;
     justify-content: center;
@@ -235,7 +230,8 @@ aside {
 }
 
 .category-title,
-.music-box p {
+.music-box p,
+footer p {
     font-size: 14px;
     color: #717171;
     font-weight: 700;
@@ -295,6 +291,7 @@ aside {
     height: 100%;
     width: 100%;
     visibility: visible;
+    /* TODO */
     /* cursor: pointer; */
 }
 
@@ -314,4 +311,46 @@ aside {
 footer {
     background-color: #282828;
     height: 80px;
+}
+
+footer,
+.album-info {
+    justify-content: space-between;
+}
+
+footer,
+.album-info,
+.player-settings {
+    align-items: center;
+}
+
+/* TODO */
+.album-info,
+.player,
+.player-settings {
+    flex-basis: ;
+}
+
+.album-info-icons {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 ;
+}
+
+.album-info-icons ion-icon:first-child {
+   margin-right: 10px;
+}
+
+.album-info h5 {
+    font-size: 15px;
+    color: #fff;
+}
+
+.album-info img {
+    width: 15%;
+    margin-right: 10px
+}
+
+.song-info {
+    align-items: center;
 }
