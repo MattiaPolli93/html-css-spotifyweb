@@ -88,6 +88,7 @@ aside {
     padding: 10px 0;
 }
 
+/* Aside profile parts */
 #aside-plus-icon {
     font-size: 30px;
     color: #000;
@@ -97,12 +98,21 @@ aside {
     margin-right: 10px;
 }
 
-.aside-profile img {
-    width: 10%;
-    display: inline-block;
+.aside-profile p {
+    color: #fff;
+    font-weight: 700;
 }
 
-.aside-profile h5::after {
+.upper-profile {
+    border-bottom: 1px solid #717171;
+    padding-top: 5px;
+}
+
+.upper-profile img {
+    width: 10%;
+}
+
+/* .upper-profile h5::after {
     content: "";
     display: block;
     color: #717171;
@@ -110,12 +120,23 @@ aside {
     width: 100%;
     height: 3px;
     margin: 5px 0;
+} */
+
+.lower-profile img {
+    background-color: grey;
+    border-radius: 50%;
+    width: 12%;
 }
 
-.aside-profile p {
-    color: #fff;
-    font-weight: 700;
-    display: inline;
+.upper-profile img,
+.lower-profile img {
+    margin-right: 10px;
+}
+
+.upper-profile,
+.lower-profile {
+    padding: 10px 0;
+    align-items: center;
 }
 
 /* Spotify features (lists, rows...) */
@@ -206,6 +227,7 @@ aside {
     text-transform: uppercase;
 }
 
+/* Spotify featires titles and rows */
 .category-title h2 {
     color: #fff;
     font-size: 24px; 
@@ -250,6 +272,44 @@ aside {
 .popular-artists .music-box img {
     border-radius: 50%;
 }
+
+.img-box {
+    position: relative;
+}
+
+.img-box:hover img {
+    transition: 0.3s ease;
+    opacity: 0.3;
+}
+
+.overlay {
+    position: absolute;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.img-box:hover .overlay {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    /* cursor: pointer; */
+}
+
+.start-icon {
+    font-size: 50px;
+    color: #f8f8f8;
+    border: 10px solid #f8f8f8;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 5px 5px 10px;
+}
+
 /* Footer */
 footer {
     background-color: #282828;
