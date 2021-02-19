@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100vh;
 }
 
@@ -67,10 +67,13 @@ aside {
     margin: 25px 0;
 }
 
+.first-list li {
+    padding: 5px 0;
+}
+
 .first-list img {
-    width: 30%;
+    width: 15%;
     height: auto;
-    background-color: #fff;
     margin-right: 10px;
     vertical-align: middle;
 }
