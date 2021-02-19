@@ -25,7 +25,7 @@ body {
 
 /* Main */
 main {
-    height: calc(100% - 80px);
+    height: calc(100% - 90px);
     overflow: auto;
 }
 
@@ -49,6 +49,23 @@ aside {
 .aside-lists-logo {
     overflow: hidden;
     flex-direction: column;
+}
+
+.aside-lists-logo li {
+    border-left: 3px solid transparent;    
+}
+
+.aside-lists-logo li:hover {
+    border-left: 3px solid #adff2f;
+}
+
+.second-list li:hover:first-child {
+    border-left: 3px solid #ff8412;
+
+}
+
+.aside-lists-logo li a {
+    margin-left: 2px;
 }
 
 .first-list a,
@@ -82,6 +99,7 @@ aside {
 
 .second-list h3 {
     text-transform: uppercase;
+    margin-left: 2px;
 }
 
 .second-list li {
@@ -300,8 +318,8 @@ footer p {
 /* Footer */
 footer {
     background-color: #282828;
-    height: 80px;
-    padding: 0 25px;
+    height: 90px;
+    padding: 0 25px 15px;
 }
 
 footer,
@@ -318,7 +336,6 @@ footer,
     align-items: center;
 }
 
-/* TODO */
 .album-info,
 .player-settings {
     flex-basis: 15%;
@@ -345,7 +362,8 @@ footer,
 }
 
 .album-info img {
-    width: 25%;
+    width: 45px;
+    height: auto;
     margin-right: 10px
 }
 
@@ -355,12 +373,8 @@ footer,
     justify-content: center;
 }
 
-.buttons {
-    padding-bottom: 10px;
-}
-
 .buttons ion-icon {
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
 }
 
@@ -374,15 +388,22 @@ footer,
     padding: 3px 3px 3px 6px;
 }
 
+.length-bar {
+    width: 50%;
+}
+
 .play-bar {
     width: 100%;
-    height: 4px;
+    height: 5px;
     border-radius: 15px;
     background-color: #717171;
+    margin-top: 15px;
+    overflow: hidden;
 }
 
 .listen-bar {
-    width: 35%;
+    width: 25%;
+    height: 5px;
     background-color: #fff;
 }
 
@@ -397,6 +418,13 @@ footer,
     height: 4px;
     border-radius: 15px;
     background-color: #717171;
+    overflow: hidden;
+}
+
+.listen-bar-small {
+    width: 25%;
+    height: 5px;
+    background-color: #fff;
 }
 
 .player-settings ion-icon {
