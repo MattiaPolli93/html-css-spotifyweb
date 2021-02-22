@@ -153,7 +153,7 @@ aside {
 }
 
 .lower-profile img {
-    background-color: grey;
+    background-color: #717171;
     border-radius: 50%;
     width: 12%;
 }
@@ -169,14 +169,10 @@ aside {
     align-items: center;
 }
 
-.hidden-icons {
-    height: 0;
-}
-
+/* Responsive */
 @media screen and (min-width: 614px) {
     #hidden-logo {
-        visibility: hidden;
-        height: 0;
+        display: none;
     }
 }
 
@@ -186,15 +182,16 @@ aside {
         padding: 0;
     }
     
-    .logo {
-        height: 0;
+    .aside-lists-logo img,
+    #hidden-logo {
+        cursor: pointer;
     }
-     
+
     #hidden-logo {
         width: 25px;
         height: 25px;
         margin: 10px 0 15px 8px;
-        visibility: visible;
+        display: block;
     }
 
     .first-list li {
@@ -205,7 +202,7 @@ aside {
     .logo,
     .first-list a,
     .second-list {
-        visibility: hidden;
+        display: none;
     }
 
     .first-list img,
@@ -227,7 +224,7 @@ aside {
 
     .aside-profile h5,
     .aside-profile p {
-        visibility: hidden;
+        display: none;
     }
 
     .lower-profile img {
@@ -401,6 +398,14 @@ footer p {
 }
 
 /* Responsive */
+@media screen and (min-width: 950px) {
+    .recently-played .music-box,
+    .created .music-box,
+    .popular-artists .music-box {
+        flex-basis: 15%;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .spotify-features {
         padding-left: 20px;
@@ -410,6 +415,10 @@ footer p {
         margin-bottom: 30px;
     }
 
+    .category-title p {
+        margin-bottom: 5px;
+    }
+
     .recently-played,
     .created,
     .popular-artists {
@@ -417,8 +426,10 @@ footer p {
         margin-top: 0;
     }
 
-    .recently-played .music-box {
-        flex-basis: 20%;
+    .recently-played .music-box,
+    .created .music-box,
+    .popular-artists .music-box {
+        flex-basis: 22%;
         margin-top: 20px;
     }
 }
@@ -435,7 +446,7 @@ footer p {
     .recently-played .music-box,
     .created .music-box,
     .popular-artists .music-box {
-        flex-basis: 35%;
+        flex-basis: 40%;
     }
     
     .overlay .start-icon {
@@ -454,6 +465,10 @@ footer p {
 
     .upgrade-bar button p {
         margin: 0 15px;
+    }
+
+    .recently-played .music-box, .created .music-box, .popular-artists .music-box {
+        flex-basis: 45%;
     }
 }
 
@@ -668,7 +683,7 @@ footer,
     }
 
     #start-player {
-        border: 3px solid #fff;
+        border: 4px solid #fff;
         padding: 4px 3px 4px 5px;
     }
 }
