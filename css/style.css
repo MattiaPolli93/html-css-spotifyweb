@@ -61,6 +61,7 @@ aside {
 .logo img {
     width: 100%;
     height: auto;
+    margin-bottom: 15px;
 }
 
 .aside-lists-logo {
@@ -100,7 +101,7 @@ aside {
 }
 
 .first-list {
-    margin: 25px 0;
+    margin-bottom: 25px;
 }
 
 .first-list li {
@@ -168,8 +169,70 @@ aside {
     align-items: center;
 }
 
-@media screen and (max-width: 558px) {
+.hidden-icons {
+    height: 0;
+}
 
+@media screen and (min-width: 614px) {
+    #hidden-logo {
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@media screen and (max-width: 614px) {
+    aside {
+        width: 40px;
+        padding: 0;
+    }
+    
+    .logo {
+        height: 0;
+    }
+     
+    #hidden-logo {
+        width: 25px;
+        height: 25px;
+        margin: 10px 0 15px 8px;
+        visibility: visible;
+    }
+
+    .first-list li {
+        height: 35px;
+        padding: 0;
+    }
+    
+    .logo,
+    .first-list a,
+    .second-list {
+        visibility: hidden;
+    }
+
+    .first-list img,
+    .aside-profile img {
+        width: 25px;
+        height: auto;
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .upper-profile {
+        border-bottom: none;
+    }
+
+    .upper-profile,
+    .lower-profile {
+        padding: 0;
+    }
+
+    .aside-profile h5,
+    .aside-profile p {
+        visibility: hidden;
+    }
+
+    .lower-profile img {
+        margin: 7px 0 5px 7px;
+    }
 }
 
 /* Spotify features (lists, rows...) */
@@ -383,6 +446,12 @@ footer p {
 }
 
 @media screen and (max-width: 614px) {
+    .upgrade-bar {
+        width: 100%;
+        left: 40px;
+        padding-right: 35px;
+    }
+
     .upgrade-bar button p {
         margin: 0 15px;
     }
@@ -587,5 +656,19 @@ footer,
    .album-info img { 
         width: 35px;
         height: auto;
+    }
+
+    .buttons ion-icon {
+    font-size: 15px;
+    color: #fff;
+    }
+
+    .length-bar {
+        width: 80%;
+    }
+
+    #start-player {
+        border: 3px solid #fff;
+        padding: 4px 3px 4px 5px;
     }
 }
