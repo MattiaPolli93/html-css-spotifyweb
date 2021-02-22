@@ -23,6 +23,23 @@ body {
     list-style: none;
 }
 
+/* Cursor-pointer */
+.aside-lists-logo .logo,
+.aside-lists-logo li a,
+.upper-profile,
+.lower-profile img,
+.main-list li a,
+.upgrade-bar button,
+.music-box,
+.song-info-text p,
+.album-info-icons ion-icon,
+.player ion-icon,
+.play-bar,
+.player-settings ion-icon,
+.play-bar-small {
+    cursor: pointer;
+}
+
 /* Main */
 main {
     height: calc(100% - 90px);
@@ -61,7 +78,6 @@ aside {
 
 .second-list li:hover:first-child {
     border-left: 3px solid #ff8412;
-
 }
 
 .aside-lists-logo li a {
@@ -74,8 +90,7 @@ aside {
     font-size: 14px;
     color: #717171;
     text-decoration: none;
-    font-weight: 700;
-    
+    font-weight: 700;    
 }
 
 .first-list {
@@ -282,7 +297,6 @@ footer p {
 }
 
 .img-box:hover img {
-    transition: 0.3s ease;
     opacity: 0.3;
 }
 
@@ -299,8 +313,6 @@ footer p {
     height: 100%;
     width: 100%;
     visibility: visible;
-    /* TODO */
-    /* cursor: pointer; */
 }
 
 .start-icon {
@@ -319,7 +331,7 @@ footer p {
 footer {
     background-color: #282828;
     height: 90px;
-    padding: 0 25px 15px;
+    padding: 0 25px 5px;
 }
 
 footer,
@@ -338,12 +350,11 @@ footer,
 
 .album-info,
 .player-settings {
-    flex-basis: 15%;
+    flex-basis: 18%;
 }
 
 .player {
-    flex-basis: 70%;
-    align-items: center;
+    flex-basis: 64%;
 }
 
 /* Left part */
@@ -356,21 +367,35 @@ footer,
    margin-right: 10px;
 }
 
+.first-icon:hover ion-icon,
+.second-icon:hover ion-icon {
+   color: #fff;
+}
+
+.album-info img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px
+}
+
 .album-info h5 {
     font-size: 15px;
     color: #fff;
 }
 
-.album-info img {
-    width: 45px;
-    height: auto;
-    margin-right: 10px
+.song-info-text p:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* Middle part */
 .player {
     flex-direction: column;
     justify-content: center;
+}
+
+.buttons {
+    margin-bottom: 10px;
 }
 
 .buttons ion-icon {
@@ -385,11 +410,18 @@ footer,
 #start-player {
     border-radius: 50%;
     border: 4px solid #fff;
-    padding: 3px 3px 3px 6px;
+    padding: 3px 3px 3px 5px;
+}
+
+#start-player:hover {
+    transform: scale(1.5);
+    transition: 0.2s;
 }
 
 .length-bar {
-    width: 50%;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .play-bar {
@@ -397,19 +429,50 @@ footer,
     height: 5px;
     border-radius: 15px;
     background-color: #717171;
-    margin-top: 15px;
-    overflow: hidden;
+    margin: 0 15px;
+}
+
+.play-bar p {
+    color: #fff;
+    font-size: 10px;
 }
 
 .listen-bar {
+    position: relative;
+    border-radius: 15px;
     width: 25%;
     height: 5px;
     background-color: #fff;
 }
 
-.play-bar::before,
-.play-bar::after {
+.listen-bar ion-icon {
+    right: 0;
+    width: 15px;
+    height: 15px;
+    transform: translate(35%, -50%);
+}
 
+.listen-bar ion-icon,
+.listen-bar-small ion-icon {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    color: #fff;
+    visibility: hidden;
+}    
+
+.play-bar:hover .listen-bar,
+.listen-bar:hover,
+.play-bar-small:hover .listen-bar-small,
+.listen-bar-small:hover {
+    background-color: #adff2f;
+}
+
+.play-bar:hover .listen-bar ion-icon,
+.listen-bar:hover ion-icon,
+.play-bar-small:hover .listen-bar-small ion-icon,
+.listen-bar-small:hover ion-icon {
+    visibility: visible;
 }
 
 /* Right part */
@@ -418,13 +481,21 @@ footer,
     height: 4px;
     border-radius: 15px;
     background-color: #717171;
-    overflow: hidden;
 }
 
 .listen-bar-small {
+    position: relative;
     width: 25%;
     height: 5px;
+    border-radius: 15px;
     background-color: #fff;
+}
+
+.listen-bar-small ion-icon {
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    transform: translate(150%, -50%);
 }
 
 .player-settings ion-icon {
