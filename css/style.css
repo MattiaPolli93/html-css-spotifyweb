@@ -25,6 +25,7 @@ body {
 
 /* Cursor-pointer */
 .aside-lists-logo .logo,
+.aside-lists-logo img,
 .aside-lists-logo li a,
 .upper-profile,
 .lower-profile img,
@@ -78,7 +79,7 @@ aside {
 }
 
 .second-list li:hover:first-child {
-    border-left: 3px solid #ff8412;
+    border-left: 3px solid #248000;
 }
 
 .aside-lists-logo li a {
@@ -276,6 +277,13 @@ aside {
     transform: scale(1.2);
 }
 
+/* Responsive */
+@media screen and (max-height: 180px) {
+    .upgrade-bar {
+        display: none;
+    }
+}
+
 /* Music-items part */
 .main-list {
     width: 100%;
@@ -315,7 +323,12 @@ aside {
     text-transform: uppercase;
 }
 
-/* Spotify featires titles and rows */
+.main-list li:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+/* Spotify features titles and rows */
 .category-title h2 {
     color: #fff;
     font-size: 24px; 
@@ -468,7 +481,7 @@ footer p {
     }
 
     .recently-played .music-box, .created .music-box, .popular-artists .music-box {
-        flex-basis: 45%;
+        flex-basis: 40%;
     }
 }
 
