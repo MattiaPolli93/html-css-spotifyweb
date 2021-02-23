@@ -711,22 +711,39 @@ footer,
 }
 
 @media screen and (max-width: 614px) {
-   .album-info img { 
+   footer {
+       padding: 0 5px;
+   }
+   
+   .album-info,
+   .player-settings {
+       width: 25%;
+   }
+
+   .player {
+       width: 30%;
+   }
+
+    .album-info img { 
         width: 35px;
         height: auto;
     }
-
-    .buttons ion-icon {
-    font-size: 15px;
-    color: #fff;
+    
+    .album-info-icons {
+        margin-left: 5px;
     }
-
-    .length-bar {
-        width: 80%;
+    
+    .buttons ion-icon {
+        font-size: 15px;
+        color: #fff;
+    }
+    
+    .buttons ion-icon:not(:last-child) {
+        margin-right: 15px;        
     }
 
     #start-player {
-        border: 4px solid #fff;
+        border: 3px solid #fff;
         padding: 4px 3px 4px 5px;
     }
 }
